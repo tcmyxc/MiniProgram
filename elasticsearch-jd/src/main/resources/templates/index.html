@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>首页</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="app">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">简单搜索</a>
+          </div>
+          <div class="navbar-right">
+            <form class="navbar-form">
+              <input type="text" v-model="keyword" class="form-control" placeholder="Search..." name="keyword">
+              <input type="submit" @click.prevent="searchKey">Submit</input>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">搜索结果</h1>
+
+            <div class="row placeholders">
+              <div class="col-xs-6 col-sm-3 placeholder" v-for="result in results">
+                <img :src="result.productImg" width="200" height="200">
+                <p v-html="result.productTitle"></p>
+                <span class="text-muted">{{result.productPrice}}</span>
+                <p>{{result.productShop}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+      <script th:src="@{/js/jquery-1.12.4.min.js}"></script>
+      <script th:src="@{/js/bootstrap.min.js}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script th:src="@{/js/vue.min.js}"></script>
+
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            keyword : '',//搜索关键字
+            results: []//搜索结果
+          },
+          methods: {
+            searchKey(){
+              var keyword = this.keyword;
+              //console.log(keyword);
+              //对接后端接口
+              axios.get('search/'+keyword).then(response=>{
+                console.log(response);
+                this.results = response.data;//绑定数据
+              })
+            }
+          }
+
+        })
+      </script>
+  </body>
+</html>
