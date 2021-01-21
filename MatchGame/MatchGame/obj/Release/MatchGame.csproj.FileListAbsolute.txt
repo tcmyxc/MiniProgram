@@ -1,0 +1,16 @@
+E:\WorkSpace\VS2017\MatchGame\MatchGame\bin\Release\MatchGame.exe.config
+E:\WorkSpace\VS2017\MatchGame\MatchGame\bin\Release\MatchGame.exe
+E:\WorkSpace\VS2017\MatchGame\MatchGame\bin\Release\MatchGame.pdb
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.csprojAssemblyReference.cache
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MainWindow.g.cs
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\App.g.cs
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame_MarkupCompile.cache
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame_MarkupCompile.lref
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MainWindow.baml
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.g.resources
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.Properties.Resources.resources
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.csproj.GenerateResource.cache
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.csproj.CoreCompileInputs.cache
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.csproj.Fody.CopyLocal.cache
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.exe
+E:\WorkSpace\VS2017\MatchGame\MatchGame\obj\Release\MatchGame.pdb
